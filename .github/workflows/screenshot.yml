@@ -1,0 +1,20 @@
+name: Branch Created Action
+
+on:
+  create:
+    branches:
+      - release/*
+      - topic/*
+
+jobs:
+  branch_created_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Display Branch Name
+        run: echo "Branch '${{ github.ref_name }}' has been created."
+
+      - name: Additional Actions
+        run: echo "Perform additional actions here when a branch is created."
