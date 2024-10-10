@@ -3,8 +3,13 @@ name: Branch Created Action
 on:
   create:
     branches:
-      - release/**
-      - topic/**
+      - release/*
+      - topic/*
+  push:
+    branches:
+      - main
+      - release/*
+      - topic/*
 
 jobs:
   branch_created_job:
