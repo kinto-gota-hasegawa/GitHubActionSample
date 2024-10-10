@@ -1,10 +1,6 @@
 name: Branch Created Action
 
 on:
-  create:
-    branches:
-      - release/*
-      - topic/*
   push:
     branches:
       - main
